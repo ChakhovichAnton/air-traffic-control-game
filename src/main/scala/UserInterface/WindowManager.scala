@@ -106,7 +106,7 @@ object WindowManager:
         ErrorPopUp("No active games exist!", 200, 100).getPopUp.open()
 
   def top = new MainFrame:
-    title     = "Air Trafic Control Game"
+    title     = "Air Traffic Control Game"
     contents  = windows
     size      = new Dimension(frameWidth, frameHeight)
     resizable = false

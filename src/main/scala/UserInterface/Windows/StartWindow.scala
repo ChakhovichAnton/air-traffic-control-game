@@ -12,7 +12,7 @@ import scala.swing.event.ButtonClicked
 
 class StartWindow() extends Panel, Windows.Window():
   //Building the start window layout
-  private val gameName           = new Label("Air Trafic Control Game")
+  private val gameName           = new Label("Air Traffic Control Game")
   private val instructionsButton = new Button("Instructions")
 
   gameName.font                  = Font(Font.Dialog, Font.Style.Bold, 40)
