@@ -5,7 +5,6 @@ import UserInterface.Windows.*
 import UserInterface.PopUps.*
 import FileHandling.FileHandlingHelperMethods.*
 import FileHandling.GameJSONParser.loadGame
-import FileHandling.GameReport.writeGameReportFile
 
 import scala.swing.*
 
@@ -32,8 +31,8 @@ object WindowManager:
     leftSideBorderWidth
   )
 
-  //Loading all the game files
-  val fileList            = getFileList("GameScenarios", ".json")
+  //Listing available the game files
+  val fileList = Vector("ThreeRunway.json")
 
   private val gamesAndVisuals = {
     fileList
@@ -85,8 +84,6 @@ object WindowManager:
         pauseWindow.closeWindow()
         scoreReportWindow.openWindow()
         scoreReportWindow.setGame(gW.game)
-
-        writeGameReportFile(gW.game.airport.statistics.getScoreReport)
 
         gW.game.resetGame()
         gW.resetGameWindow()

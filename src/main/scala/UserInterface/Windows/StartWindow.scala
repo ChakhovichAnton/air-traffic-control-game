@@ -14,7 +14,6 @@ class StartWindow() extends Panel, Windows.Window():
   //Building the start window layout
   private val gameName           = new Label("Air Trafic Control Game")
   private val instructionsButton = new Button("Instructions")
-  private val gameReportButton   = new Button("Game Reports")
 
   gameName.font                  = Font(Font.Dialog, Font.Style.Bold, 40)
   private val buttonWidth        = 200
@@ -74,7 +73,6 @@ class StartWindow() extends Panel, Windows.Window():
     contents += new BorderPanel {
       add(new BoxPanel(Orientation.Horizontal){
         contents += HStrut((frameWidth - buttonWidth)/2 - 10)//-10 is needed for correcting the width
-        contents += gameReportButton
         background = backgroundColor
       }, BorderPanel.Position.South)
       background = backgroundColor
@@ -85,51 +83,25 @@ class StartWindow() extends Panel, Windows.Window():
 
   instructionsButton.maximumSize   = buttonDimensions
   instructionsButton.preferredSize = buttonDimensions
-
-  gameReportButton.maximumSize     = buttonDimensions
-  gameReportButton.preferredSize   = buttonDimensions
-
-  private val gameReportPopUpW  = 500//width
-  private val gameReportPopUpH  = 300//height
+  
   private val instructionsPopUp = InstructionsPopUp(500, 350)
-  private var gameReportPopUp   = GameReportPopUp(gameReportPopUpW, gameReportPopUpH)
-  //a new GameReportPopUp is loaded every single time it is opened, hence it is a "var"
-
   private var firstTime = true
-  private val gameReportScrollBarTicker =
-    Timer(1, ActionListener(e => gameReportPopUp.updateScrollBar()))
 
-  def openWindow() =
-    wholeLayout.visible = true
-    if firstTime then
-      gameReportScrollBarTicker.start()
-      firstTime = false
-    else
-      gameReportScrollBarTicker.restart()
-  end openWindow
+  def openWindow() = wholeLayout.visible = true
 
   def closeWindow() =
     wholeLayout.visible = false
     instructionsPopUp.getPopUp.close()
-    gameReportPopUp.getPopUp.close()
-    
-    if gameReportScrollBarTicker.isRunning then
-      gameReportScrollBarTicker.stop()
   end closeWindow
 
   def getContents = wholeLayout
 
   listenTo(instructionsButton)
-  listenTo(gameReportButton)
   menuItems.foreach(listenTo(_))
 
   reactions += {
     case ButtonClicked(e) if e == instructionsButton =>
       instructionsPopUp.openPopUp()
-    case ButtonClicked(e) if e == gameReportButton =>
-      //creating a new object to load the new game reports
-      gameReportPopUp = GameReportPopUp(gameReportPopUpW, gameReportPopUpH)
-      gameReportPopUp.openPopUp()
     case ButtonClicked(e) =>
       windowManager.possiblyStartScenario(e.text)
   }

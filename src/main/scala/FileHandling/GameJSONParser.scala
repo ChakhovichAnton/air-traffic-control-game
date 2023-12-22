@@ -8,6 +8,7 @@ import Argonaut.*
 import scala.math.{max, min}
 import swing.Color
 import scala.collection.mutable.Buffer
+import java.io.*
 
 
 object GameJSONParser:
@@ -155,14 +156,17 @@ object GameJSONParser:
 
 
   private def readJsonFile(source: String):Option[Airport] =
-    val s = Try(scala.io.Source.fromFile(source))
-    s match
-      case Failure(e) =>
-        None
-      case Success(s) =>
-        val r = s.mkString.decodeOption[Airport]
-        s.close()
-        r
+    val path = "/Resources/GameScenarios/" + source
+    val stream: InputStream = getClass.getResourceAsStream(path)
+
+    try {
+      val lines: Iterator[String] = scala.io.Source.fromInputStream(stream).getLines
+      val ap = lines.mkString.decodeOption[Airport]
+      stream.close()
+      ap
+    } catch {
+      case _:Throwable => None
+    }
   end readJsonFile
 
 

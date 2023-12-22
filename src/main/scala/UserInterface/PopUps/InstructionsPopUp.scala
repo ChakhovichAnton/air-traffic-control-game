@@ -12,7 +12,7 @@ class InstructionsPopUp(width: Int, height: Int) extends Panel, WindowsPopUp(wid
   private val insHeader = new Label("Instructions")
   insHeader.font        = Font(Font.Dialog, Font.Style.Bold, 25)
 
-  private val path = "Files/Instructions.txt"
+  private val path = "/Resources/Files/Instructions.txt"
   val labelVector: Vector[Vector[Label]] = {
     FileHandling.FileHandlingHelperMethods.readTextFile(path) match
       case Some(t) =>
