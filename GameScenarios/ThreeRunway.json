@@ -1,0 +1,311 @@
+{
+  "runways": [
+     {
+      "startX": 150,
+      "startY": 50,
+      "endX": 180,
+      "endY": 560,
+      "name": "R20"
+    },
+    {
+      "startX": 50,
+      "startY": 120,
+      "endX": 350,
+      "endY": 150,
+      "name": "R10"
+    },
+    {
+      "startX": 50,
+      "startY": 440,
+      "endX": 350,
+      "endY": 470,
+      "name": "R11"
+    }
+  ],
+  "gates": [
+    {
+      "name": "G10",
+      "locationX": 240,
+      "locationY": 221,
+      "direction": "East"
+    },
+    {
+      "name": "G11",
+      "locationX": 240,
+      "locationY": 251,
+      "direction": "East"
+    },
+    {
+      "name": "G12",
+      "locationX": 240,
+      "locationY": 281,
+      "direction": "East"
+    },
+    {
+      "name": "G13",
+      "locationX": 240,
+      "locationY": 311,
+      "direction": "East"
+    },
+    {
+      "name": "G14",
+      "locationX": 240,
+      "locationY": 341,
+      "direction": "East"
+    },
+    {
+      "name": "G20",
+      "locationX": 360,
+      "locationY": 221,
+      "direction": "West"
+    },
+    {
+      "name": "G21",
+      "locationX": 360,
+      "locationY": 251,
+      "direction": "West"
+    },
+    {
+      "name": "G22",
+      "locationX": 360,
+      "locationY": 281,
+      "direction": "West"
+    },
+    {
+      "name": "G23",
+      "locationX": 360,
+      "locationY": 311,
+      "direction": "West"
+    },
+    {
+      "name": "G24",
+      "locationX": 360,
+      "locationY": 341,
+      "direction": "West"
+    },
+    {
+      "name": "G30",
+      "locationX": 415,
+      "locationY": 210,
+      "direction": "South"
+    },
+    {
+      "name": "G31",
+      "locationX": 445,
+      "locationY": 210,
+      "direction": "South"
+    },
+    {
+      "name": "G32",
+      "locationX": 475,
+      "locationY": 210,
+      "direction": "South"
+    },
+    {
+      "name": "G40",
+      "locationX": 415,
+      "locationY": 351,
+      "direction": "North"
+    },
+    {
+      "name": "G41",
+      "locationX": 445,
+      "locationY": 351,
+      "direction": "North"
+    },
+    {
+      "name": "G42",
+      "locationX": 475,
+      "locationY": 351,
+      "direction": "North"
+    }
+  ],
+  "taxiways": [
+    {
+      "startX": 60,
+      "startY": 200,
+      "endX": 60,
+      "endY": 440
+    },
+    {
+      "startX": 230,
+      "startY": 60,
+      "endX": 230,
+      "endY": 440
+    },
+    {
+      "startX": 60,
+      "startY": 545,
+      "endX": 400,
+      "endY": 545
+    },
+    {
+      "startX": 60,
+      "startY": 200,
+      "endX": 502,
+      "endY": 200
+    },
+    {
+      "startX": 230,
+      "startY": 390,
+      "endX": 502,
+      "endY": 390
+    },
+    {
+      "startX": 400,
+      "startY": 200,
+      "endX": 400,
+      "endY": 545
+    },
+    {
+      "startX": 256,
+      "startY": 60,
+      "endX": 502,
+      "endY": 60
+    },
+    {
+      "startX": 340,
+      "startY": 60,
+      "endX": 340,
+      "endY": 200
+    },
+    {
+      "startX": 350,
+      "startY": 453,
+      "endX": 502,
+      "endY": 453
+    },
+    {
+      "startX": 502,
+      "startY": 390,
+      "endX": 502,
+      "endY": 453
+    },
+    {
+      "startX": 502,
+      "startY": 60,
+      "endX": 502,
+      "endY": 200
+    }
+  ],
+  "surfaces": [
+    {
+      "startX": 243,
+      "startY": 200,
+      "endX": 530,
+      "endY": 395,
+      "colorR": 101,
+      "colorG": 99,
+      "colorB": 99
+    }
+  ],
+  "images": [
+    {
+      "x": 340,
+      "y": 158,
+      "source": "Files/terminal.png"
+    },
+    {
+      "x": 304,
+      "y": 225,
+      "source": "Files/island_terminal.png"
+    }
+  ],
+  "weather": [
+    {
+      "description": "Strong Wind",
+      "startTime": 40,
+      "endTime": 70,
+      "affectedRunways": [
+        {
+          "runwayName": "R11"
+        },
+        {
+          "runwayName": "R10"
+        }
+      ]
+    }
+  ],
+  "airplanes": [
+    {
+      "time": 0,
+      "flightNumber": 123,
+      "maxFuel": 100,
+      "currentFuel": 70,
+      "passangers": 111,
+      "minRunwayLengthForTakeoff": 470,
+      "minRunwayLengthForLanding": 450,
+      "imageFileName": "airplane_white.png"
+    },
+    {
+      "time": 2,
+      "flightNumber": 111,
+      "maxFuel": 100,
+      "currentFuel": 85,
+      "passangers": 67,
+      "minRunwayLengthForTakeoff": 200,
+      "minRunwayLengthForLanding": 170,
+      "imageFileName": "airplane_red.png"
+    },
+    {
+      "time": 5,
+      "flightNumber": 567,
+      "maxFuel": 100,
+      "currentFuel": 50,
+      "passangers": 78,
+      "minRunwayLengthForTakeoff": 400,
+      "minRunwayLengthForLanding": 200,
+      "imageFileName": "airplane_yellow.png"
+    },
+    {
+      "time": 10,
+      "flightNumber": 129,
+      "maxFuel": 100,
+      "currentFuel": 70,
+      "passangers": 111,
+      "minRunwayLengthForTakeoff": 150,
+      "minRunwayLengthForLanding": 220,
+      "imageFileName": "airplane_gray.png"
+    },
+    {
+      "time": 20,
+      "flightNumber": 789,
+      "maxFuel": 100,
+      "currentFuel": 70,
+      "passangers": 100,
+      "minRunwayLengthForTakeoff": 400,
+      "minRunwayLengthForLanding": 360,
+      "imageFileName": "airplane_white.png"
+    },
+    {
+      "time": 30,
+      "flightNumber": 999,
+      "maxFuel": 100,
+      "currentFuel": 70,
+      "passangers": 543,
+      "minRunwayLengthForTakeoff": 230,
+      "minRunwayLengthForLanding": 200,
+      "imageFileName": "airplane_blue.png"
+    },
+    {
+      "time": 32,
+      "flightNumber": 977,
+      "maxFuel": 100,
+      "currentFuel": 70,
+      "passangers": 145,
+      "minRunwayLengthForTakeoff": 250,
+      "minRunwayLengthForLanding": 200,
+      "imageFileName": "airplane_white.png"
+    },
+    {
+      "time": 45,
+      "flightNumber": 656,
+      "maxFuel": 100,
+      "currentFuel": 89,
+      "passangers": 678,
+      "minRunwayLengthForTakeoff": 250,
+      "minRunwayLengthForLanding": 150,
+      "imageFileName": "airplane_red.png"
+    }
+  ]
+}

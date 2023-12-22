@@ -1,0 +1,68 @@
+WHAT IS THE GAME ABOUT
+This is an air trafic control game in which user is the air traffic controller whose
+goal is to have planes land and takeoff safely, using as little time as possible. The
+game ends whenever a plane crashes, or all of the planes have managed to land and
+takeoff safely.
+
+Next we will go through the game's components to make sure that the airport can be
+operated safely. In the center of the screen, there will be a map to view the
+airport; it contains lots of useful information for safe operation. One must be
+quick, but most importantly safe since only a single mistake can end the game!
+<next_page>
+AIRPLANES
+The plane cards (found on the left sidebar) contain information on arriving and
+departing airplanes. The planes wants are displayed on the card. Don't let a plane
+run out of fuel in the air, or land on a too short runway!
+
+RUNWAYS
+The runway cards include lots of useful information on the runway, but not all of it.
+Taking off and landing planes can only be seen on the map. The queueu shows
+currently queueing airplanes and planes taxiing to the queue. If there's the letter
+"T" in front of the planes name, it means the plane is still taxiing to the runway.
+A queue can hold up to three airplanes at a time. Runways have a cooldown between
+takeoffs. The cooldown lasts for 5 second. After the cooldown has ended, a plane
+can takeoff again.
+<next_page>
+GATES
+Planes refuel and load passangers while at the gate. A gate can only have a single
+plane using or reserving it at a time. The name of the gate is displayed next to
+the gate in yellow text. A Red label "Reserved" is used to mark the gate as reserved.
+
+TAXIING
+The planes taxi from one location to another. During taxiing, the plane is invisible
+on the airport map.
+<next_page>
+WEATHER
+A new weather condition is announced on the screen. When the annoucement happens,
+it is recommended to head to the runway window and see which runways are affected.
+Affected runways will remain closed until the weather conditon ends. There is no
+annoucement, when a weather condition ends but the ending can be seen from the
+runway window.
+
+TIP: an airplane can taxi from a runway to another.
+<next_page>
+INPUT FORMATTING
+The user can order planes to land, takeoff and taxi. For taxiing and landings, the
+three first digits of the input determine the airplane's flight number. The fourth
+digit determines the action, where T stands for taxi and L for landing. The input's
+last digits determine the destination: a gate's number or a runway's name.
+
+Commanding a takeoff works differently from landing and taxiing. To have a plane
+takeoff on a runway, it has to be in the queue. First plane in the queue gets to
+takeoff first. To give a plane permission to takeoff, input's first letter must be
+"T", which stands for takeoff. It is followed by the runway's name.
+
+One can type their input on the text field found in the top right corner. Sending
+the input happens by pressing the enter key or the button below the text field.
+If the input is not valid, a textbox will appear displayed a possible problem with
+the input.
+<next_page>
+INPUT EXAMPLES
+123LR1 -> airplane number 123 should land on runway one
+TR1       -> airplane should take off on runway one
+123TR1 -> airplane number 123 should taxi to runway one
+123TG1 -> airplane number 123 should taxi to gate one
+
+FINAL WORDS
+Start the game by closing the instructions and by choosing a scenario! Good luck
+and most importantly remember to have fun!
